@@ -21,7 +21,7 @@ public class spawner : MonoBehaviour
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
-        Vector3 spawnPoint = new Vector3(point.position.x , point.position.y, point.position.z + Random.Range(0.8f, -12));
+        Vector3 spawnPoint = new Vector3(point.position.x , point.position.y, point.position.z + Random.Range(7, -7));
         GameObject newEnemy = Instantiate(enemy, spawnPoint, Quaternion.identity);
         StartCoroutine(spawnEnemy(interval, enemy));
 
