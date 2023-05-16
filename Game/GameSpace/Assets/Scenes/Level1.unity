@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 927376772}
   - component: {fileID: 927376771}
   - component: {fileID: 927376776}
+  - component: {fileID: 927376777}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -403,7 +404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  conSpeed: 0
 --- !u!136 &927376772
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -489,8 +489,12 @@ Transform:
   m_LocalPosition: {x: 281.73, y: 0.87, z: -5.09}
 =======
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+<<<<<<< HEAD
+  m_LocalPosition: {x: 280.57, y: 1, z: 0}
+=======
   m_LocalPosition: {x: 280.57, y: 2, z: 0}
 >>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
+>>>>>>> 32d2e4cb44f37b99e208c784fe26fa8fc9e3ccf9
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -531,7 +535,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+<<<<<<< HEAD
+--- !u!114 &927376777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927376770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f690f4b0ff9513748952dfdcaaf129b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 3
+  Damage: 1
+=======
 >>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
+>>>>>>> 32d2e4cb44f37b99e208c784fe26fa8fc9e3ccf9
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,9 +680,14 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+<<<<<<< HEAD
+  m_Enabled: 0
+  serializedVersion: 2
+=======
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
+>>>>>>> 32d2e4cb44f37b99e208c784fe26fa8fc9e3ccf9
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1053981189
