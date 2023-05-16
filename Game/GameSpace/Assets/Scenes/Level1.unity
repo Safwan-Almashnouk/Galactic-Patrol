@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,13 +117,17 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1 &593801468
+=======
 --- !u!1 &576646951
+>>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,6 +135,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 593801469}
+  m_Layer: 0
+  m_Name: BulletSpawnArea
+=======
   - component: {fileID: 576646957}
   - component: {fileID: 576646956}
   - component: {fileID: 576646955}
@@ -139,11 +148,15 @@ GameObject:
   - component: {fileID: 576646952}
   m_Layer: 0
   m_Name: DeathWall (1)
+>>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!4 &593801469
+=======
 --- !u!54 &576646952
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -236,11 +249,22 @@ MeshFilter:
   m_GameObject: {fileID: 576646951}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &576646957
+>>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 593801468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 927376775}
+  m_RootOrder: -1
+=======
   m_GameObject: {fileID: 576646951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 273.4, y: 1.89, z: 0}
@@ -249,6 +273,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+>>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -387,8 +412,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927376770}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -450,22 +484,48 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927376770}
+<<<<<<< HEAD
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 281.73, y: 0.87, z: -5.09}
+=======
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+<<<<<<< HEAD
   m_LocalPosition: {x: 280.57, y: 1, z: 0}
+=======
+  m_LocalPosition: {x: 280.57, y: 2, z: 0}
+>>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
+>>>>>>> 32d2e4cb44f37b99e208c784fe26fa8fc9e3ccf9
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
+  - {fileID: 593801469}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+<<<<<<< HEAD
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &927376776
+MonoBehaviour:
+=======
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
 --- !u!54 &927376776
 Rigidbody:
+>>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927376770}
+<<<<<<< HEAD
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a14ce3c653329340a897521e756abbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletSpawnPosition: {fileID: 593801469}
+  BulletPrefab: {fileID: 8774362847988811153, guid: 72670da28bfcaf84bb0e1d7a4a1d9425, type: 3}
+  bulletSpeed: 10
+=======
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -475,6 +535,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!114 &927376777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +550,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 3
   Damage: 1
+=======
+>>>>>>> 4731c00838901858ada0b9d1d004aa775eed6741
+>>>>>>> 32d2e4cb44f37b99e208c784fe26fa8fc9e3ccf9
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,9 +593,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -566,7 +638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.70705014, y: -0.008953541, z: -0.70705026, w: -0.008941053}
-  m_LocalPosition: {x: 8.390001, y: 0, z: -0.25999975}
+  m_LocalPosition: {x: 15.49, y: -0.18, z: -0.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -600,9 +672,22 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053981187}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+<<<<<<< HEAD
   m_Enabled: 0
   serializedVersion: 2
+=======
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+>>>>>>> 32d2e4cb44f37b99e208c784fe26fa8fc9e3ccf9
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1053981189
@@ -712,9 +797,17 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695615860}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Radius: 1.422165
   m_Center: {x: 0, y: -2.5898643, z: -3.4050407}
 --- !u!4 &1695615863
