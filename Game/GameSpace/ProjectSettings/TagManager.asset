@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - ship
-  - meteor
-=======
-  - Bullet
-  - Meteor
->>>>>>> 32d2e4cb44f37b99e208c784fe26fa8fc9e3ccf9
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Bullet
-  - meteorLayer
+  - 
+  - 
   - 
   - 
   - 
