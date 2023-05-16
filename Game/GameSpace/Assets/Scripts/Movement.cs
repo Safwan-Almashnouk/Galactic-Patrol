@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
     
 {
     [SerializeField] float speed;
-    [SerializeField] float conSpeed = 15;
+   
     private Rigidbody obj;
 
 

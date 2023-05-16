@@ -17,4 +17,12 @@ public class BorderScript : MonoBehaviour
     {
         obj.velocity = new Vector3(-5, 0, 0);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Meteor(Clone)")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
