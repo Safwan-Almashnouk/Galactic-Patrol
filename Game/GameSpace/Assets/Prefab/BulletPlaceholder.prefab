@@ -95,17 +95,8 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8774362847988811153}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -117,21 +108,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8774362847988811153}
-  serializedVersion: 4
+  serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -146,11 +126,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8774362847988811153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb41ac6565c0929429e25a58118f25b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 93086dbfec6c25b4386b94236ed8f610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Game/GameSpace/Assets/Prefab/BulletPlaceholder.prefab
   bulletSpeed: 50
 --- !u!114 &8535908314157981174
+=======
+  bulletSpeed: 0
+--- !u!114 &6689044782392747942
+>>>>>>> 4c86e77c2b776b5410fbd849ffc81208f756a98c:Game/GameSpace/Assets/Scripts/BulletPlaceholder.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,9 +144,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8774362847988811153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4ab6bb630af064bbc29648d93df084, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a4d4064d65cd7944a87df967a4d11ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1.5
+<<<<<<< HEAD:Game/GameSpace/Assets/Prefab/BulletPlaceholder.prefab
   bulletPrefab: {fileID: 8774362847988811153}
   meteorPrefab: {fileID: 8081853347463789401, guid: 2baa40157d182b44e83d63826c9975bd, type: 3}
+=======
+  bulletPrefab: {fileID: 0}
+  meteorPrefab: {fileID: 0}
+>>>>>>> 4c86e77c2b776b5410fbd849ffc81208f756a98c:Game/GameSpace/Assets/Scripts/BulletPlaceholder.prefab
