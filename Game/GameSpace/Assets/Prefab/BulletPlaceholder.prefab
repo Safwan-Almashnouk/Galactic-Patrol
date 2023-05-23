@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7718000316140445956}
   - component: {fileID: 6968164535957875345}
   - component: {fileID: 4140305354765475313}
-  - component: {fileID: 6689044782392747942}
+  - component: {fileID: 8535908314157981174}
   m_Layer: 6
   m_Name: BulletPlaceholder
   m_TagString: Bullet
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 50
---- !u!114 &6689044782392747942
+--- !u!114 &8535908314157981174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,6 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4ab6bb630af064bbc29648d93df084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  life: 1.5
   bulletPrefab: {fileID: 8774362847988811153}
   meteorPrefab: {fileID: 8081853347463789401, guid: 2baa40157d182b44e83d63826c9975bd, type: 3}
