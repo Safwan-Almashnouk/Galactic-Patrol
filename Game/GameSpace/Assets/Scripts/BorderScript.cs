@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BorderScript : MonoBehaviour
 {
+  
+    public float pushStrength; 
+    // Start is called before the first frame update
     private Rigidbody obj;
 
-    // Start is called before the first frame update
     void Start()
     {
         obj = GetComponent<Rigidbody>();
@@ -18,11 +20,19 @@ public class BorderScript : MonoBehaviour
         obj.velocity = new Vector3(-5, 0, 0);
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.name == "Meteor(Clone)")
+
+        if (other.gameObject.name == "Meteor(Clone)")
         {
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.name == "ship")
+        {
+            other.transform.position = new Vector3(transform.position.x + pushStrength, other.transform.position.y, other.transform.position.z);
         }
     }
+
 }

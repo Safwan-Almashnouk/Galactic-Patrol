@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
     
 {
-    [SerializeField] float speed;
+    
    
     private Rigidbody obj;
 
@@ -29,7 +29,6 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            
             transform.position += new Vector3(10,0,0) * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.W))
