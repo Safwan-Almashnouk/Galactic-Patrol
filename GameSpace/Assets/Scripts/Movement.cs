@@ -21,11 +21,11 @@ public class Movement : MonoBehaviour
         
         if (Input.GetKey(KeyCode.A)) 
         { 
-            transform.position += new Vector3(0, 0, -10 ) * Time.deltaTime;
+            transform.position += new Vector3(0, 0, -15 ) * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D)) 
         {
-            transform.position += new Vector3(0, 0, 10 ) * Time.deltaTime;
+            transform.position += new Vector3(0, 0, 15 ) * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
