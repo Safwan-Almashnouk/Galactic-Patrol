@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pauze : MonoBehaviour
+public class Play : MonoBehaviour
 {
-    public void AntiMove()
+    public void Move()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1;
     }
 }
