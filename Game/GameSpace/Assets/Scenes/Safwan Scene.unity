@@ -410,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b2b919b1ebdc54a9346a4d099f5040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &1127910923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02295ca3f8c868d4584a18d5df1dfacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8081853347463789401, guid: 2baa40157d182b44e83d63826c9975bd, type: 3}
+  enemy: {fileID: 3938130548178961681, guid: 4923a34b6ed3f134c95a851ac4c1ab84, type: 3}
   enemyInterval: 0.5
   point: {fileID: 0}
 --- !u!135 &1127910924
@@ -446,7 +447,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127910921}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 266.24, y: 1, z: -2.26}
+  m_LocalPosition: {x: 254.2, y: 1, z: -2.26}
   m_LocalScale: {x: 1, y: 0.95869, z: 0.95004}
   m_ConstrainProportionsScale: 0
   m_Children: []

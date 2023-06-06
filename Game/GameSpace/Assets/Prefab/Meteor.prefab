@@ -93,7 +93,19 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8081853347463789401}
   m_Material: {fileID: 0}
+<<<<<<< HEAD:Game/GameSpace/Assets/Scripts/Meteor.prefab
   m_IsTrigger: 1
+=======
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+>>>>>>> adab8de00756e191a2d1bbbfe4a7a1ce91ec173d:Game/GameSpace/Assets/Prefab/Meteor.prefab
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
