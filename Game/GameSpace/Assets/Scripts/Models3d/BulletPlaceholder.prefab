@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93086dbfec6c25b4386b94236ed8f610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 0
+  bulletSpeed: 50
 --- !u!114 &6689044782392747942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,5 +143,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1.5
-  bulletPrefab: {fileID: 0}
-  meteorPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 8774362847988811153}
+  meteorPrefab: {fileID: 8081853347463789401, guid: 2baa40157d182b44e83d63826c9975bd, type: 3}
