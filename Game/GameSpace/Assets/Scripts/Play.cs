@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Play : MonoBehaviour
 {
+    public GameObject gameUI;
     public void Move()
     {
-        Time.timeScale = 1;
+        gameUI.SetActive(false);
+        Time.timeScale = 0;
     }
 }

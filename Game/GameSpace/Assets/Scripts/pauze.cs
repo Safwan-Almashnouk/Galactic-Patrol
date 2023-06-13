@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class pauze : MonoBehaviour
 {
+    public GameObject gameUI;
     public void AntiMove()
-    {
-        Time.timeScale = 0;
+    { 
+       gameUI.SetActive(false);
+        Time.timeScale = 1;
     }
 }
