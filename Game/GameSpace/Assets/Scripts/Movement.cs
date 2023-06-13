@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     public float endDesBk = 3;
     public float RotPos = 35;
     public float RotSpeed = 10;
+    public float OgRot = 0;
 
 
     private void Start()
@@ -32,18 +33,24 @@ public class Movement : MonoBehaviour
 
         Vector3 slashSpeed = Vector3.zero;
         Vector3 rotation = new Vector3(0,transform.localEulerAngles.y, transform.localEulerAngles.z);
+        
 
         if (Input.GetKey(KeyCode.A)) 
         {
-            slashSpeed.z -= speed;
+           slashSpeed.z -= speed;
            rotation.z += RotSpeed * Time.deltaTime;
-
         }
+        if (Input.GetButtonUp("A"))
+        {
+            rotation.z = OgRot;
+        }
+        
         if (Input.GetKey(KeyCode.D)) 
         {
             slashSpeed.z += speed;
            rotation.z += -RotSpeed * Time.deltaTime;
         }
+       
         if (Input.GetKey(KeyCode.S))
         {
             slashSpeed.x += speed;
