@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BorderScript : MonoBehaviour
 {
-  
-    public float pushStrength; 
+
+    public float pushStrength;
     // Start is called before the first frame update
     private Rigidbody obj;
 
@@ -21,7 +21,7 @@ public class BorderScript : MonoBehaviour
     }
 
 
-    
+
     private void OnTriggerStay(Collider other)
     {
 

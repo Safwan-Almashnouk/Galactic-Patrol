@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeteorMovment : MonoBehaviour
 
-    
+
 {
     Collider meteor, Frontwall;
 
@@ -14,8 +14,8 @@ public class MeteorMovment : MonoBehaviour
     {
         StartCoroutine(SelfDestruct());
         meteor = gameObject.GetComponent<Collider>();
-        Frontwall = GameObject.Find("FrontWall").GetComponent<Collider>();
-        Physics.IgnoreCollision(Frontwall, meteor);
+        //Frontwall = GameObject.Find("FrontWall").GetComponent<Collider>();
+        // Physics.IgnoreCollision(Frontwall, meteor);
 
     }
     public void Update()

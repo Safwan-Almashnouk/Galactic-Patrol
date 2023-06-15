@@ -8,7 +8,7 @@ public class DespawnBullet : MonoBehaviour
 {
     public float life = 1.5f;
     public GameObject bulletPrefab;
-
+    
     float delay = 0.2f;
 
 
@@ -17,12 +17,12 @@ public class DespawnBullet : MonoBehaviour
         Destroy(bulletPrefab, life);
     }
 
+    
 
-
-
+    
     void OnTriggerEnter(Collider collision)
 
-
+        
     {
         if (collision.gameObject.name == "Meteor(Clone)")
         {
