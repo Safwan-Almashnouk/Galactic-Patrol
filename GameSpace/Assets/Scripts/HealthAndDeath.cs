@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthAndDeath : MonoBehaviour
 {
     //player Health
-    public float Health = 3;
+    public float Health;
     //Meteor damage
     public float MeteorDamage = 1;
 
@@ -17,7 +18,8 @@ public class HealthAndDeath : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collission)
     {
-        if (collission.transform.CompareTag("Meteor"))
+        //if the object the ship collides with has the tag meteor and if health is greater than zero:
+        if (collission.transform.CompareTag("Meteor") && Health > 0)
         {
             //check if collision is detected
             Debug.Log("Ship hit a meteor");
@@ -26,13 +28,14 @@ public class HealthAndDeath : MonoBehaviour
             Health -= MeteorDamage;
             Debug.Log($"Health: {Health}");
 
-
+            //if health is smaller than or equal to zero:
+            if (Health <= 0)
+            {
+                Debug.Log("Ur dead lol");
+                SceneManager.LoadScene(sceneName:"GameOver");
+            }
         }
-        if (Health >= 0) 
-        {
-            Debug.Log("Ur dead lol");
 
-        }
     }
 
 
