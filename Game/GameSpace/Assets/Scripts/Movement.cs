@@ -17,8 +17,9 @@ public class Movement : MonoBehaviour
     public float endDesBk = 7;
     public float RotPos = 35;
     public float RotSpeed = 10;
-    public float OgRot = 0;
+    public float InputX;
 
+    
 
     private void Start()
     {
@@ -26,7 +27,10 @@ public class Movement : MonoBehaviour
     }
     public void Update()
     {
+        InputX = Input.GetAxisRaw("Horizontal");
+
         Vector3 newPosition = transform.localPosition;
+        //Quaternion ogpos = transform.localRotation(0, 0, 0);
         obj.velocity= new Vector3 (-5, 0, 0 );
         cameraPos = new Vector3(obj.velocity.x * Time.deltaTime + camera.transform.position.x, camera.transform.position.y, camera.transform.position.z);
         camera.transform.position = cameraPos;
@@ -40,13 +44,33 @@ public class Movement : MonoBehaviour
            slashSpeed.z -= speed;
            rotation.z += RotSpeed * Time.deltaTime;
         }
-        
-        
         if (Input.GetKey(KeyCode.D)) 
         {
             slashSpeed.z += speed;
-           rotation.z += -RotSpeed * Time.deltaTime;
+           rotation.z -= RotSpeed * Time.deltaTime;
         }
+
+        if (InputX == 0)
+        {
+           
+            Debug.Log(rotation.z);
+            if (rotation.z > 180 + 0.5f)
+            {
+                rotation.z += RotSpeed * Time.deltaTime;
+                Debug.Log("TurnLeft");
+            }
+            else if (rotation.z > 0.5f && rotation.z < 180)
+            {
+                rotation.z -= RotSpeed * Time.deltaTime;
+                Debug.Log("TurnRight");
+            }
+            else
+            {
+                rotation.z = 0;
+            }
+        }
+
+
        
         if (Input.GetKey(KeyCode.S))
         {
