@@ -24,6 +24,8 @@ public class spawner : MonoBehaviour
         Vector3 spawnPoint = new Vector3(point.position.x , point.position.y, point.position.z + Random.Range(7, -7));
         GameObject newEnemy = Instantiate(enemy, spawnPoint, Quaternion.identity);
         StartCoroutine(spawnEnemy(interval, enemy));
+        GameObject spawned = Instantiate(enemy);
+        spawned.transform.localRotation = Quaternion.Euler(new Vector3(0, Random.Range(0f, 360f), 0));
 
     }
 }

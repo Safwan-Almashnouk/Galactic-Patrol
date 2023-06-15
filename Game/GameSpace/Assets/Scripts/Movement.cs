@@ -13,8 +13,8 @@ public class Movement : MonoBehaviour
     public float speed= 10;
     Vector3 cameraPos;
     public float endDes = 7;
-    public float endDesFr = 7;
-    public float endDesBk = 3;
+    public float endDesFr = 12;
+    public float endDesBk = 7;
     public float RotPos = 35;
     public float RotSpeed = 10;
     public float OgRot = 0;
@@ -40,10 +40,7 @@ public class Movement : MonoBehaviour
            slashSpeed.z -= speed;
            rotation.z += RotSpeed * Time.deltaTime;
         }
-        if (Input.GetButtonUp("A"))
-        {
-            rotation.z = OgRot;
-        }
+        
         
         if (Input.GetKey(KeyCode.D)) 
         {
