@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
@@ -10,14 +11,12 @@ public class HealthSystem : MonoBehaviour
 
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.name == "Meteor(Clone)")
+        if(collision.gameObject.name == "Meteor(clone)")
         {
-            Destroy(collision.gameObject);
-            Health -= Damage;
-            print(Health);
+            //checks if meteor hits ship
+            Debug.Log("Meteor hit ship");
         }
     }
 }
