@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,8 +38,8 @@ public class Movement : MonoBehaviour
         {
             slashSpeed.z -= speed;
            rotation.z += RotSpeed * Time.deltaTime;
-
         }
+        
         if (Input.GetKey(KeyCode.D)) 
         {
             slashSpeed.z += speed;
