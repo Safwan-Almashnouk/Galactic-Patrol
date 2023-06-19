@@ -8,6 +8,7 @@ public class DespawnBullet : MonoBehaviour
 {
     public float life = 1.5f;
     public GameObject bulletPrefab;
+    public GameObject effect; 
     
     float delay = 0.2f;
 
@@ -29,6 +30,9 @@ public class DespawnBullet : MonoBehaviour
             Debug.Log("hah");
             Destroy(collision.gameObject);
             Destroy(bulletPrefab, delay);
+            GameObject effects = Instantiate(effect,transform.position, Quaternion.identity);
+            Destroy(effects, 0.5f);
+
         }
     }
 }

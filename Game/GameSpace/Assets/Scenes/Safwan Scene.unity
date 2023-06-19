@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3938130548178961681, guid: 4923a34b6ed3f134c95a851ac4c1ab84, type: 3}
-  enemyInterval: 1
+  enemyInterval: 0
   point: {fileID: 0}
 --- !u!135 &1127910924
 SphereCollider:
