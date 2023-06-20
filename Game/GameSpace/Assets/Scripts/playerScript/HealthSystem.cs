@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HealthAndDeath : MonoBehaviour
+public class HealthSystem : MonoBehaviour
 {
     //player Health
     public float Health;
     //Meteor damage
     public float MeteorDamage = 1;
-
-
 
     public void Start()
     {

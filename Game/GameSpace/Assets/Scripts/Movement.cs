@@ -52,8 +52,6 @@ public class Movement : MonoBehaviour
 
         if (InputX == 0)
         {
-
-            Debug.Log(rotation.z);
             if (rotation.z > 180 + 0.5f)
             {
                 rotation.z += RotSpeed * Time.deltaTime;

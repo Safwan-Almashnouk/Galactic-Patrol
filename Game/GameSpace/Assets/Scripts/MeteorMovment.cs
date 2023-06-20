@@ -14,7 +14,6 @@ public class MeteorMovment : MonoBehaviour
     {
         StartCoroutine(SelfDestruct());
         meteor = gameObject.GetComponent<Collider>();
-       
 
     }
     public void Update()
