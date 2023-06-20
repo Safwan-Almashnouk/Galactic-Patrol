@@ -12,7 +12,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Instantiate(BulletPrefab, BulletSpawnPosition.position, BulletSpawnPosition.rotation);
         }
