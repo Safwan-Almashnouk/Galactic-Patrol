@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ElizasNewScene.unity
     guid: 3de13f49cee97f040a75d8225fdba7e9
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 1fdf26bc775e929459f7c3ecbfa6b0fe
   m_configObjects: {}
