@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 1.5
   bulletPrefab: {fileID: 6768258270183995328}
+  effect: {fileID: 1375129085989863269, guid: 5a4bfe6a94d1e0d49bf3bc63128e4af1, type: 3}
 --- !u!136 &-2139571146714569928
 CapsuleCollider:
   m_ObjectHideFlags: 0

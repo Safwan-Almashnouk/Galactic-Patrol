@@ -14,8 +14,7 @@ public class MeteorMovment : MonoBehaviour
     {
         StartCoroutine(SelfDestruct());
         meteor = gameObject.GetComponent<Collider>();
-        //Frontwall = GameObject.Find("FrontWall").GetComponent<Collider>();
-        // Physics.IgnoreCollision(Frontwall, meteor);
+       
 
     }
     public void Update()
@@ -37,3 +36,4 @@ public class MeteorMovment : MonoBehaviour
     }
 
 }
+
