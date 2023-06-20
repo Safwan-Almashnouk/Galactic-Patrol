@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 1060197204}
   - component: {fileID: 1060197203}
   - component: {fileID: 1060197202}
+  - component: {fileID: 1060197209}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -727,12 +728,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060197201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a14ce3c653329340a897521e756abbd, type: 3}
+  m_Script: {fileID: 11500000, guid: fb9f531afd06e1b48ae1fed44d89f1e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BulletSpawnPosition: {fileID: 1931286292}
-  BulletPrefab: {fileID: 8774362847988811153, guid: 72670da28bfcaf84bb0e1d7a4a1d9425, type: 3}
-  bulletSpeed: 50
+  BulletPrefab: {fileID: 0}
+  bulletSpeed: 0
 --- !u!54 &1060197203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -769,11 +770,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060197201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d1d371c3c17b14f889aa4adcac8c52, type: 3}
+  m_Script: {fileID: 11500000, guid: a3c078817952b804087fcf39746b8a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+<<<<<<< HEAD
+=======
   conSpeed: 0
+>>>>>>> SafwanBranch
 --- !u!136 &1060197205
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -864,6 +868,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
+--- !u!114 &1060197209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060197201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f690f4b0ff9513748952dfdcaaf129b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 10
+  Damage: 1
 --- !u!1 &1931286291
 GameObject:
   m_ObjectHideFlags: 0

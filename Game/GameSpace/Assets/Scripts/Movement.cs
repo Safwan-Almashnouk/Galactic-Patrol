@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
-    
+
 {
-    
-   
+
+
     private Rigidbody obj;
-    public GameObject camera; 
+    public GameObject camera;
     public float rotate = 250f;
-    public float speed= 10;
+    public float speed = 10;
     Vector3 cameraPos;
     public float endDes = 7;
     public float endDesFr = 12;
@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
     public float RotSpeed = 10;
     public float InputX;
 
-    
+
 
     private void Start()
     {
@@ -31,47 +31,39 @@ public class Movement : MonoBehaviour
 
         Vector3 newPosition = transform.localPosition;
         //Quaternion ogpos = transform.localRotation(0, 0, 0);
-        obj.velocity= new Vector3 (-5, 0, 0 );
+        obj.velocity = new Vector3(-5, 0, 0);
         cameraPos = new Vector3(obj.velocity.x * Time.deltaTime + camera.transform.position.x, camera.transform.position.y, camera.transform.position.z);
         camera.transform.position = cameraPos;
 
         Vector3 slashSpeed = Vector3.zero;
-        Vector3 rotation = new Vector3(0,transform.localEulerAngles.y, transform.localEulerAngles.z);
-        
+        Vector3 rotation = new Vector3(0, transform.localEulerAngles.y, transform.localEulerAngles.z);
 
-        if (Input.GetKey(KeyCode.A)) 
+
+        if (Input.GetKey(KeyCode.A))
         {
-           slashSpeed.z -= speed;
-           rotation.z += RotSpeed * Time.deltaTime;
+            slashSpeed.z -= speed;
+            rotation.z += RotSpeed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.D)) 
+        if (Input.GetKey(KeyCode.D))
         {
             slashSpeed.z += speed;
-           rotation.z -= RotSpeed * Time.deltaTime;
+            rotation.z += -RotSpeed * Time.deltaTime;
         }
 
         if (InputX == 0)
         {
-           
-            Debug.Log(rotation.z);
-            if (rotation.z > 180 + 0.5f)
-            {
-                rotation.z += RotSpeed * Time.deltaTime;
-                Debug.Log("TurnLeft");
-            }
-            else if (rotation.z > 0.5f && rotation.z < 180)
+            if (RotPos > 0)
             {
                 rotation.z -= RotSpeed * Time.deltaTime;
-                Debug.Log("TurnRight");
             }
-            else
+            if (RotPos < 0)
             {
-                rotation.z = 0;
+                rotation.z -= RotSpeed * Time.deltaTime;
             }
         }
 
 
-       
+
         if (Input.GetKey(KeyCode.S))
         {
             slashSpeed.x += speed;
@@ -80,24 +72,24 @@ public class Movement : MonoBehaviour
         {
             slashSpeed.x -= speed;
         }
-        
-        
+
+
         //Rotation 
         if (rotation.z > RotPos && rotation.z < 180)
-         {
-            
-            rotation.z = RotPos;
-             
-         }
-         if(rotation.z < 360-RotPos && rotation.z > 180)
-         {
-             rotation.z = -RotPos;
-             
-         }
+        {
 
-        
+            rotation.z = RotPos;
+
+        }
+        if (rotation.z < 360 - RotPos && rotation.z > 180)
+        {
+            rotation.z = -RotPos;
+
+        }
+
+
         transform.localEulerAngles = rotation;
-        
+
         //Movmenet 
         slashSpeed.Normalize();
         slashSpeed *= speed * Time.deltaTime;
@@ -127,6 +119,6 @@ public class Movement : MonoBehaviour
     public void movment()
     {
         //Vector3 newPosition = transform.position;
-       
+
     }
 }
