@@ -9752,6 +9752,7 @@ GameObject:
   - component: {fileID: 1375129085989863266}
   - component: {fileID: 1375129085989863267}
   - component: {fileID: 1375129085989863268}
+  - component: {fileID: -4824500568410933867}
   m_Layer: 0
   m_Name: EEEXPLOSION
   m_TagString: Untagged
@@ -14613,3 +14614,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-4824500568410933867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375129085989863269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde579e56685be44c87d6c7f68e991b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
