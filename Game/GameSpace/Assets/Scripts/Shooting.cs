@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
     public Transform BulletSpawnPosition;
     public GameObject BulletPrefab;
     public float bulletSpeed;
+    public AudioSource audioSource;
 
     // Update is called once per frame
     void Update()
@@ -15,6 +16,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Instantiate(BulletPrefab, BulletSpawnPosition.position, BulletSpawnPosition.rotation);
+            audioSource.Play();
         }
         
     }
