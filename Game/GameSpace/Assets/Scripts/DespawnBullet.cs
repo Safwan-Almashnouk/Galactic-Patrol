@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class DespawnBullet : MonoBehaviour
 {
-    public float life = 1.5f;
+    public float life = 1f;
     public GameObject bulletPrefab;
-    public GameObject effect; 
+    public GameObject effect;
+    public AudioSource expolosion;
     
-    float delay = 0.2f;
+    float delay = 3f;
 
 
     public void Awake()
@@ -18,7 +19,10 @@ public class DespawnBullet : MonoBehaviour
         Destroy(bulletPrefab, life);
     }
 
-    
+    private void OoogaBooga()
+    {
+        expolosion.Play();
+    }
 
     
     void OnTriggerEnter(Collider collision)
@@ -29,9 +33,13 @@ public class DespawnBullet : MonoBehaviour
         {
             Debug.Log("hah");
             Destroy(collision.gameObject);
-            Destroy(bulletPrefab, delay);
+            GetComponent<Renderer>().enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
+            OoogaBooga();
             GameObject effects = Instantiate(effect,transform.position, Quaternion.identity);
             Destroy(effects, 0.5f);
+            Destroy(bulletPrefab, delay);
+
 
         }
     }
