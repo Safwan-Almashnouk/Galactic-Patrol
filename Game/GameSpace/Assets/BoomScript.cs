@@ -16,7 +16,7 @@ public class BoomScript : MonoBehaviour
         posRelativeToBoss = transform.position - Boss.position;
         posRelativeToBoss.y += 5;
         posRelativeToBoss.x += Random.Range(1, 2);
-        posRelativeToBoss.z+= Random.Range(15, -15);
+        posRelativeToBoss.z+= Random.Range(10, -15);
     }
 
     // Update is called once per frame
@@ -25,6 +25,7 @@ public class BoomScript : MonoBehaviour
         if (bossIsAlive)
         {
             transform.position = Boss.position + posRelativeToBoss;
+
         }
         else
         {
