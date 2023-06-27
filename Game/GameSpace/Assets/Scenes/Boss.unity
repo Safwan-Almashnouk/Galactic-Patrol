@@ -568,6 +568,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &904157500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904157492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec84ba03d207bf445b984addba55db49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ray: {fileID: 4742288235064752008, guid: fdc3d4c0c1485644d965e422ce020b28, type: 3}
+  dangerSign: {fileID: 4258020586708622653, guid: 738798a664b3bfc42b0d6ed5d79e3950, type: 3}
+  rayInternval: 1
+  point: {fileID: 0}
+  location: 30
+  delay: 0
 --- !u!1001 &916536597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -670,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5978955998261140702, guid: e4854e5d7c2158b40acbf279f220e83f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 280.8
+      value: 280.81
       objectReference: {fileID: 0}
     - target: {fileID: 5978955998261140702, guid: e4854e5d7c2158b40acbf279f220e83f, type: 3}
       propertyPath: m_LocalPosition.y
