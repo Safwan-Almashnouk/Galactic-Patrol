@@ -568,7 +568,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+
 --- !u!114 &904157500
+
+--- !u!114 &904157499
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -586,6 +590,12 @@ MonoBehaviour:
   point: {fileID: 0}
   location: 30
   delay: 0
+
+  ray: {fileID: 0}
+  dangerSign: {fileID: 0}
+  interval: 0
+  point: {fileID: 0}
+
 --- !u!1001 &916536597
 PrefabInstance:
   m_ObjectHideFlags: 0
