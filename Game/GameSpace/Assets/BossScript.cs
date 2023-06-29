@@ -52,7 +52,7 @@ public class BossScript : MonoBehaviour
         if (collision.gameObject.name == "Bullet(Clone)")
         {
             health = health - 1;
-            Debug.Log(health);
+            
         }
         if (health <= 0) 
         {

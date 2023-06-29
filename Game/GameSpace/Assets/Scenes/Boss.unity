@@ -150,15 +150,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 38b6e5713da03e64db8f6959781a844a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 47b3cb1125636a4469b7fae3ec834237, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.332
+  m_Volume: 0.87
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 59
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -481,7 +481,7 @@ AudioSource:
   m_GameObject: {fileID: 904157492}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b7480a98e4b9b5b43a2c6824725bb6a3, type: 2}
   m_audioClip: {fileID: 8300000, guid: eba4e23963a79a145ae688a2cb6e1d05, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -584,6 +584,9 @@ MonoBehaviour:
   dangerSign: {fileID: 4277992331296932870, guid: 09c312daf6a8c0d4aa6798ba4ce78acc, type: 3}
   interval: 2
   player: {fileID: 1213174311}
+  audioSource: {fileID: 904157498}
+  warning: {fileID: 8300000, guid: 9b82144243b58d7439c1d42ae46ed1d3, type: 3}
+  blast: {fileID: 8300000, guid: d2fe4d7582d6ebc489e5d0e20c4a1fb3, type: 3}
   point: {fileID: 0}
 --- !u!1001 &916536597
 PrefabInstance:
@@ -695,7 +698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5978955998261140702, guid: e4854e5d7c2158b40acbf279f220e83f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.4
+      value: -3.61
       objectReference: {fileID: 0}
     - target: {fileID: 5978955998261140702, guid: e4854e5d7c2158b40acbf279f220e83f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -965,6 +968,10 @@ PrefabInstance:
     - target: {fileID: 628705394047336292, guid: 7039785017b999643b1069a425ad9ff9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 628705394047336293, guid: 7039785017b999643b1069a425ad9ff9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7039785017b999643b1069a425ad9ff9, type: 3}

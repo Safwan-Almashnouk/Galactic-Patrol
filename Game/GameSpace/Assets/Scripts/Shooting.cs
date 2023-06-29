@@ -5,9 +5,16 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     //Gun Variables
+
     public Transform BulletSpawnPosition;
     public GameObject BulletPrefab;
     public AudioSource audioSource;
+
+    [SerializeField] private Transform BulletSpawnPosition;
+    [SerializeField] private GameObject BulletPrefab;
+    [SerializeField] private float bulletSpeed;
+    [SerializeField] private AudioSource audioSource;
+
 
     // Update is called once per frame
     void Update()

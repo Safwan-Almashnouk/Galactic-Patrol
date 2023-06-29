@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class dangersign : MonoBehaviour
 {
-    public Rigidbody obj;
+    [SerializeField] private Rigidbody obj;
     
     private float delay= 0.5f;
 

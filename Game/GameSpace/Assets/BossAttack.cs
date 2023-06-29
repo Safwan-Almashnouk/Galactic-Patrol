@@ -7,14 +7,19 @@ using System.Threading.Tasks;
 public class BossAttack : MonoBehaviour
 
 {
-    public GameObject ray;
-    public GameObject dangerSign;
-    public float interval;
-    private float time = 5;
+    [SerializeField] private GameObject ray;
+    [SerializeField] private GameObject dangerSign;
+    [SerializeField] private float interval;
+    private float time = 2.5f;
     private float timePassed = 0;
-    public GameObject player;
+    [SerializeField] private GameObject player;
+    [SerializeField] private AudioSource audioSource;
 
-    public Transform point;
+
+    [SerializeField] private AudioClip warning;
+    [SerializeField] private AudioClip blast;
+
+    [SerializeField] private Transform point;
 
     void Start()
     {
@@ -33,6 +38,8 @@ public class BossAttack : MonoBehaviour
             GameObject newDangerSign = Instantiate(dangerSign, spawnPoint + new Vector3(35, 0, 0), rotation);
             spawnBeam(spawnPoint, rotation);
 
+            audioSource.PlayOneShot(warning, 1f);
+
         }
     }
 
@@ -42,7 +49,15 @@ public class BossAttack : MonoBehaviour
     {
         Quaternion rot = Quaternion.Euler(point.rotation.x , point.rotation.y + 90, point.rotation.z + 90);
         await Task.Delay(1000);
-        GameObject newRay = Instantiate(ray, spawnPoint - new Vector3(80, 0,0), rot);
+        #if UNITY_EDITOR
+        if (UnityEditor.EditorApplication.isPlaying)
+        {
+            GameObject newRay = Instantiate(ray, spawnPoint - new Vector3(80, 0, 0), rot);
+            audioSource.PlayOneShot(blast, 0.8f);
+
+        }
+#endif
+
     }
 }
 

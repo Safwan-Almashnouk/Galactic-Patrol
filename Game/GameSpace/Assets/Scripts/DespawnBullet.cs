@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class DespawnBullet : MonoBehaviour
 {
-    public float life = 1f;
-    public GameObject bulletPrefab;
-    public GameObject effect;
-    public AudioSource expolosion;
+    [SerializeField] private float life = 1f;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject effect;
+    [SerializeField] private AudioSource expolosion;
     
     float delay = 3f;
 
