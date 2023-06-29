@@ -47,7 +47,7 @@ public class BossAttack : MonoBehaviour
 
     async private void spawnBeam(Vector3 spawnPoint, Quaternion rotation)
     {
-        Quaternion rot = Quaternion.Euler(point.rotation.x , point.rotation.y + 90, point.rotation.z + 90);
+        Quaternion rot = Quaternion.Euler(point.rotation.x , point.rotation.y -90, point.rotation.z + 90);
         await Task.Delay(1000);
         #if UNITY_EDITOR
         if (UnityEditor.EditorApplication.isPlaying)
