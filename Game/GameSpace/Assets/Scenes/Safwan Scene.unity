@@ -397,8 +397,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1464070293}
   - component: {fileID: 1464070292}
-  - component: {fileID: 1464070291}
   - component: {fileID: 1464070294}
+  - component: {fileID: 1464070295}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -406,21 +406,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1464070291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464070290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26da098ff8f1b954c8f97879b123e8e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 5704713434536590873, guid: c012fa5611d35494f91cb3eb08dfa721, type: 3}
-  enemyInterval: 2
-  point: {fileID: 0}
 --- !u!135 &1464070292
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -461,6 +446,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d674d8faf1e5be444800f2433a70d006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1464070295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464070290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142e93f99ec258e46834728649dd91dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 5704713434536590873, guid: c012fa5611d35494f91cb3eb08dfa721, type: 3}
+  IsSpawning: 0
 --- !u!1 &1737911810
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +689,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &919132149159422057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149159422043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c608e9c277a2946b6b804f92595b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 5
+  MeteorDamage: 1
 --- !u!1001 &6157332941852798527
 PrefabInstance:
   m_ObjectHideFlags: 0
