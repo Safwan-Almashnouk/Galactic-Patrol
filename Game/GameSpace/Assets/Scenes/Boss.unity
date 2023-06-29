@@ -279,7 +279,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.03856964, g: 0.03696444, b: 0.8396226, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -580,9 +580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84ba03d207bf445b984addba55db49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ray: {fileID: 0}
-  dangerSign: {fileID: 0}
-  interval: 0
+  ray: {fileID: 3260202395591208248, guid: 11db8c74f0a94e548a4dfac0bee1a8a2, type: 3}
+  dangerSign: {fileID: 4277992331296932870, guid: 09c312daf6a8c0d4aa6798ba4ce78acc, type: 3}
+  interval: 2
+  player: {fileID: 1213174311}
   point: {fileID: 0}
 --- !u!1001 &916536597
 PrefabInstance:
@@ -609,7 +610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3818103656100562059, guid: 95c0e7644d2706b40a1520dec0d2b88a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 255.1
+      value: 252.2
       objectReference: {fileID: 0}
     - target: {fileID: 3818103656100562059, guid: 95c0e7644d2706b40a1520dec0d2b88a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -694,7 +695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5978955998261140702, guid: e4854e5d7c2158b40acbf279f220e83f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.11
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 5978955998261140702, guid: e4854e5d7c2158b40acbf279f220e83f, type: 3}
       propertyPath: m_LocalRotation.w
