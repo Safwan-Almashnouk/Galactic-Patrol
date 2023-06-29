@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class BulletBlasting : MonoBehaviour
 {
-    //Gun Variables
-
-    public Transform BulletSpawnPosition;
-    public GameObject BulletPrefab;
-    public AudioSource audioSource;
+   
 
     [SerializeField] private Transform BulletSpawnPosition;
     [SerializeField] private GameObject BulletPrefab;
-    [SerializeField] private float bulletSpeed;
+    [SerializeField] private float bulletSpeed = 5;
     [SerializeField] private AudioSource audioSource;
 
 
@@ -29,3 +25,4 @@ public class Shooting : MonoBehaviour
         
     }
 }
+
