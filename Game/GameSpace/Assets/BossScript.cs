@@ -11,6 +11,7 @@ public class BossScript : MonoBehaviour
     public float delay = 5f;
     bool triggeredRunAway = false;
     public AudioSource Napalm;
+    private BossAttack bossStop;
 
     
     private void Start()
@@ -51,7 +52,7 @@ public class BossScript : MonoBehaviour
         if (collision.gameObject.name == "Bullet(Clone)")
         {
             health = health - 1;
-            Debug.Log(health);
+            
         }
         if (health <= 0) 
         {
@@ -63,6 +64,8 @@ public class BossScript : MonoBehaviour
             Destroy(effects2, delay);
             Destroy(effects3, delay);
             Destroy(effects4, delay);
+            gameObject.GetComponent<BossAttack>().enabled= false;
+            
         }
         if(health == 0)
         {

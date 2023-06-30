@@ -8,16 +8,16 @@ public class Movement : MonoBehaviour
 
 
     private Rigidbody obj;
-    public GameObject camera;
-    public float rotate = 250f;
-    public float speed = 10;
+    [SerializeField] private GameObject camera;
+    [SerializeField] private float rotate = 250f;
+    [SerializeField] private float speed = 10;
     Vector3 cameraPos;
-    public float endDes = 7;
-    public float endDesFr = 12;
-    public float endDesBk = 7;
-    public float RotPos = 35;
-    public float RotSpeed = 10;
-    public float InputX;
+    [SerializeField] private float endDes = 7;
+    [SerializeField] private float endDesFr = 12;
+    [SerializeField] private float endDesBk = 7;
+    [SerializeField] private float RotPos = 35;
+    [SerializeField] private float RotSpeed = 10;
+    [SerializeField] private float InputX;
 
 
 
@@ -55,12 +55,12 @@ public class Movement : MonoBehaviour
             if (rotation.z > 180 + 0.5f)
             {
                 rotation.z += RotSpeed * Time.deltaTime;
-                Debug.Log("TurnLeft");
+               
             }
             else if (rotation.z > 0.5f && rotation.z < 180)
             {
                 rotation.z -= RotSpeed * Time.deltaTime;
-                Debug.Log("TurnRight");
+                
             }
             else
             {
