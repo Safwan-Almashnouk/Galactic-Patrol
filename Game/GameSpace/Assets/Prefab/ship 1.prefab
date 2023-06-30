@@ -349,7 +349,6 @@ GameObject:
   - component: {fileID: 4400961174973449660}
   - component: {fileID: 3589987991455531660}
   - component: {fileID: 3589987991455531701}
-  - component: {fileID: 3589987991455531697}
   - component: {fileID: 3589987991455531705}
   - component: {fileID: 3589987991455531709}
   m_Layer: 0
@@ -512,27 +511,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3589987991455531697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3589987991455531659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c078817952b804087fcf39746b8a3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 0}
-  rotate: 250
-  speed: 10
-  endDes: 7
-  endDesFr: 12
-  endDesBk: 7
-  RotPos: 35
-  RotSpeed: 100
-  InputX: 1
 --- !u!114 &3589987991455531705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,11 +520,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3589987991455531659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c608e9c277a2946b6b804f92595b1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ecf567987c2c6b4dbf553b224d3605e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
-  MeteorDamage: 1
+  camera: {fileID: 628705394047336291, guid: 6e01c1ac6f444a2438f7adc22fecfc32, type: 3}
+  rotate: 250
+  speed: 10
+  endDes: 7
+  endDesFr: 12
+  endDesBk: 7
+  RotPos: 35
+  RotSpeed: 10
+  InputX: 0
 --- !u!114 &3589987991455531709
 MonoBehaviour:
   m_ObjectHideFlags: 0
