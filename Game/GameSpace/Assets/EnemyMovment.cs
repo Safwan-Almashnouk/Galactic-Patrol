@@ -1,59 +1,52 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyMovment : MonoBehaviour
 {
-   
-    Collider enemy, Frontwall;
-    private Rigidbody obj;
-    public float speed = 7f;
-    public bool GoingRight = true;
 
+    Collider enemy, Frontwall;
+    private Rigidbody rb;
+    private float speed = 4f;
+    
+    public GameObject target;
 
     private void Start()
     {
-        StartCoroutine(SelfDestruct());
+
+        target = GameObject.Find("ship");
         enemy = gameObject.GetComponent<Collider>();
-        obj = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        
+        
+
+
 
 
     }
     public void Update()
     {
-        obj.velocity = new Vector3(-5, 0, 0);
+        if (target.transform.position.z < transform.position.z - 0.5)
+        {
 
+            rb.velocity = new Vector3(rb.velocity.x, 0, -speed);
+        }
+        else if (target.transform.position.z > transform.position.z + 0.5)
+        {
+
+            rb.velocity = new Vector3(rb.velocity.x, 0, speed);
+        }
+        else
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 0, 0);
+        }
+
+
+        rb.velocity = new Vector3(-5, 0, rb.velocity.z);
         
-        if (transform.position.z >= 7)
-        {
-            if(GoingRight) {
-                speed = -speed;
-                GoingRight = false;
-            }
-            
-        } 
-        if (transform.position.z <= -7) 
-        {
-            if (!GoingRight)
-            {
-                speed = -speed;
-                GoingRight = true;
-            }
-        }
-        transform.position += new Vector3(0, 0, speed) * Time.deltaTime;
     }
-    IEnumerator SelfDestruct()
-    {
-        yield return new WaitForSeconds(10);
-        Destroy(gameObject);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") || other.CompareTag("Border"))
-        {
-            Destroy(gameObject);
-        }
-    }
+    
 
 }
