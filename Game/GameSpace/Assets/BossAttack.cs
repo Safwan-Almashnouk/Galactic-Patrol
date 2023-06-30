@@ -53,7 +53,7 @@ public class BossAttack : MonoBehaviour
         if (UnityEditor.EditorApplication.isPlaying)
         {
             GameObject newRay = Instantiate(ray, spawnPoint - new Vector3(80, 0, 0), rot);
-            audioSource.PlayOneShot(blast, 0.8f);
+            audioSource.PlayOneShot(blast, 0.4f);
 
         }
 #endif
