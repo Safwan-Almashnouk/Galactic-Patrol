@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1866666200209856320, guid: b3ae5b7372dd5c446a34d62b0967fa4d, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 1375129085989863269, guid: e1dca54cbb0b45f4fa17551e45dad87b, type: 3}
     - target: {fileID: 3589987991455531659, guid: b3ae5b7372dd5c446a34d62b0967fa4d, type: 3}
       propertyPath: m_Name
       value: ship 1
@@ -646,7 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec84ba03d207bf445b984addba55db49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ray: {fileID: 3260202395591208248, guid: 11db8c74f0a94e548a4dfac0bee1a8a2, type: 3}
+  ray: {fileID: 136365154065010716, guid: a7615f905a3cf934aa61e37fbb7bb9c7, type: 3}
   dangerSign: {fileID: 4277992331296932870, guid: 09c312daf6a8c0d4aa6798ba4ce78acc, type: 3}
   interval: 2
   player: {fileID: 890146251}

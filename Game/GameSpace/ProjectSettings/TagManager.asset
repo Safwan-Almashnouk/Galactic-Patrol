@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Border
   - Enemy
+  - Beam
   layers:
   - Default
   - TransparentFX

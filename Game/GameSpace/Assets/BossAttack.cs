@@ -47,12 +47,12 @@ public class BossAttack : MonoBehaviour
 
     async private void spawnBeam(Vector3 spawnPoint, Quaternion rotation)
     {
-        Quaternion rot = Quaternion.Euler(point.rotation.x , point.rotation.y -90, point.rotation.z + 90);
+        Quaternion rot = Quaternion.Euler(point.rotation.x - 90, point.rotation.y -90, point.rotation.z + 90);
         await Task.Delay(1000);
         #if UNITY_EDITOR
         if (UnityEditor.EditorApplication.isPlaying)
         {
-            GameObject newRay = Instantiate(ray, spawnPoint - new Vector3(80, 0, 0), rot);
+            GameObject newRay = Instantiate(ray, spawnPoint - new Vector3(50, 0, 0), rot);
             audioSource.PlayOneShot(blast, 0.4f);
 
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LazarBeam : MonoBehaviour
 {
     private Rigidbody obj;
-    private float delay = 3f;
+    private float delay = 4f;
     void Start()
     {
         obj = GetComponent<Rigidbody>();

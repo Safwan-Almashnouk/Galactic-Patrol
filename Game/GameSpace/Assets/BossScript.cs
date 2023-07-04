@@ -33,13 +33,13 @@ public class BossScript : MonoBehaviour
        else if (triggeredRunAway == false && health <= 0)
         {
             triggeredRunAway = true;
-            StartCoroutine(runbitch());
+            StartCoroutine(escape());
             Destroy(gameObject, 10);
         }
 
     }
 
-    IEnumerator runbitch()
+    IEnumerator escape()
     {
         Debug.Log("i will run");
         yield return new WaitForSeconds(5f);
@@ -55,15 +55,11 @@ public class BossScript : MonoBehaviour
             
         }
         if (health <= 0) 
+        {for (int i=0; i<5; i++)
         {
             GameObject effects = Instantiate(effect, transform.position, Quaternion.identity);
-            GameObject effects2 = Instantiate(effect, transform.position, Quaternion.identity);
-            GameObject effects3 = Instantiate(effect, transform.position, Quaternion.identity);
-            GameObject effects4 = Instantiate(effect, transform.position, Quaternion.identity);
-            Destroy(effects,delay);
-            Destroy(effects2, delay);
-            Destroy(effects3, delay);
-            Destroy(effects4, delay);
+            Destroy(effects, delay);
+        }
             gameObject.GetComponent<BossAttack>().enabled= false;
             
         }
