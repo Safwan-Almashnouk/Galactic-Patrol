@@ -13,14 +13,14 @@ public class ScenTransition : MonoBehaviour
 
     public async void Delay()
     {
-        await Task.Delay(1000);
+        await Task.Delay(500);
         // load scene
     }
     public void NextLevel()
     {
         ani.SetTrigger("End");
         Delay();
-        /*if (gameObject.activeSelf)
+        if (gameObject.activeSelf)
         {
             
             ani.ResetTrigger("End");
@@ -29,6 +29,6 @@ public class ScenTransition : MonoBehaviour
         {
             ani.SetTrigger("End");
             ani.ResetTrigger("Start");
-        }*/
+        }
     }
 }

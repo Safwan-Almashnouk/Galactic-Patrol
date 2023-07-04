@@ -8,17 +8,18 @@ public class Score : MonoBehaviour
     public float playerScore = 0;
     public TextMeshProUGUI scoreText;
     public manager gm_manager;
+
     private void Update()
     {
-        addScore(); 
+        addScore();
     }
 
     [ContextMenu("Increase Score")]
     public void addScore()
     {
         Debug.Log("add score");
-        playerScore = playerScore+ Time.deltaTime;
+        playerScore = playerScore + Time.deltaTime;
         scoreText.text = Mathf.Floor(playerScore).ToString();
-        gm_manager.playerScore= playerScore;
+        gm_manager.playerScore = playerScore;
     }
 }
