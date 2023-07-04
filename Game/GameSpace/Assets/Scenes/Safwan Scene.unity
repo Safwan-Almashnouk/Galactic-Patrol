@@ -185,6 +185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7039785017b999643b1069a425ad9ff9, type: 3}
+--- !u!82 &421274795 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3589987991455531701, guid: b3ae5b7372dd5c446a34d62b0967fa4d, type: 3}
+  m_PrefabInstance: {fileID: 4400961175348177616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &526755549
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +566,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1866666200209856320, guid: b3ae5b7372dd5c446a34d62b0967fa4d, type: 3}
+      propertyPath: bomb
+      value: 
+      objectReference: {fileID: 8300000, guid: eba4e23963a79a145ae688a2cb6e1d05, type: 3}
+    - target: {fileID: 1866666200209856320, guid: b3ae5b7372dd5c446a34d62b0967fa4d, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 1375129085989863269, guid: e1dca54cbb0b45f4fa17551e45dad87b, type: 3}
+    - target: {fileID: 1866666200209856320, guid: b3ae5b7372dd5c446a34d62b0967fa4d, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 421274795}
     - target: {fileID: 3589987991455531659, guid: b3ae5b7372dd5c446a34d62b0967fa4d, type: 3}
       propertyPath: m_Name
       value: ship

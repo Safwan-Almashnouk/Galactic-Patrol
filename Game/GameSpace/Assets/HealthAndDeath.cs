@@ -13,6 +13,7 @@ public class HealthAndDeath : MonoBehaviour
     public float BeamDamage = 3;
     public float delay = 3f;
     public GameObject effect;
+    public AudioSource audioSource;
     public AudioClip bomb;
     
 
@@ -54,7 +55,7 @@ public class HealthAndDeath : MonoBehaviour
     }
     async private void OpenScene()
     {
-            await Task.Delay(3000);
+            await Task.Delay(7000);
             SceneManager.LoadScene(sceneName: "GameOver");
         
     }
@@ -68,17 +69,14 @@ public class HealthAndDeath : MonoBehaviour
             effects.transform.SetParent(transform, true);
             effects.GetComponent<BoomScript>().enabled= false;
             gameObject.GetComponent<Movement>().enabled = false;
-            AudioSource.PlayOneShot(bomb, 1f);
-            
-
-
+            audioSource.PlayOneShot(bomb, 0.5f);
             Destroy(effects, delay);
         }
 
             OpenScene();
-        
        
     }
+
 
 
 }
