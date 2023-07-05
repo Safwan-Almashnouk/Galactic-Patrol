@@ -9,6 +9,7 @@ TagManager:
   - Border
   - Enemy
   - Beam
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
