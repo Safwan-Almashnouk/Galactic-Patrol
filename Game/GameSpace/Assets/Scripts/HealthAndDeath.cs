@@ -9,6 +9,7 @@ public class HealthAndDeath : MonoBehaviour
     public float Health;
     //Meteor damage
     public float MeteorDamage = 1;
+    public float BulletDamage = 1;
 
 
 
@@ -34,6 +35,11 @@ public class HealthAndDeath : MonoBehaviour
                 Debug.Log("Ur dead lol");
                 SceneManager.LoadScene(sceneName: "GameOver");
             }
+        }
+
+        if (collission.transform.CompareTag("EnemyBullet") && Health < 0) 
+        {
+            Health -= BulletDamage;
         }
 
     }

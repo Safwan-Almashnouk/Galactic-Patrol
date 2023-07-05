@@ -703,6 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 5
   MeteorDamage: 1
+  BulletDamage: 1
 --- !u!1001 &6157332941852798527
 PrefabInstance:
   m_ObjectHideFlags: 0
