@@ -8,12 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 96f5fe78a02eb3d4f964a8b883f673f1
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/score-pause.unity
-    guid: 51cc32f6bfaf8ec40ba8fa53bc86029d
+    path: Assets/Scenes/Safwan Scene.unity
+    guid: dfe3ed17e112c3b4fbc0842cb1e75aec
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 1fdf26bc775e929459f7c3ecbfa6b0fe

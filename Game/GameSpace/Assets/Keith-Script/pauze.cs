@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class pauze : MonoBehaviour
+
 {
     public GameObject PauzeMenu;
 
@@ -14,7 +15,7 @@ public class pauze : MonoBehaviour
         PauzeMenu.SetActive(false);
     }
 
-    private void Update()
+   public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
