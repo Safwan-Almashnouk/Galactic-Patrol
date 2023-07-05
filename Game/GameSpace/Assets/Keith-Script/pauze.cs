@@ -16,9 +16,9 @@ public class pauze : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isPaused)
+            if (isPaused)
             {
                 ResumeGame();
             }
@@ -33,13 +33,13 @@ public class pauze : MonoBehaviour
     {
         PauzeMenu.SetActive(true);
         Time.timeScale = 0f;
-        isPaused= true;
+        isPaused = true;
     }
 
     public void ResumeGame()
     {
         PauzeMenu.SetActive(false);
         Time.timeScale = 1f;
-        isPaused= false;
+        isPaused = false;
     }
 }

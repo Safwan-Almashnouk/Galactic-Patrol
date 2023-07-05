@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
     [ContextMenu("Increase Score")]
     public void addScore()
     {
-        Debug.Log("add score");
+       
         playerScore = playerScore + Time.deltaTime;
         scoreText.text = Mathf.Floor(playerScore).ToString();
         gm_manager.playerScore = playerScore;
