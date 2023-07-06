@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class BulletBlasting : MonoBehaviour
     [SerializeField] private GameObject BulletPrefab;
     [SerializeField] private float bulletSpeed = 5;
     [SerializeField] private AudioSource audioSource;
+    private float delay = 1.5f;
 
 
     // Update is called once per frame
@@ -24,5 +26,9 @@ public class BulletBlasting : MonoBehaviour
         }
         
     }
+
+    
+
+  
 }
 

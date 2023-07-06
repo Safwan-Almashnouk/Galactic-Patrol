@@ -8,14 +8,20 @@ public class Shield : MonoBehaviour
 {
     [Header("shield")]
     public Image shieldImage;
-    public float cooldown = 5;
+    public float cooldown = 25;
     bool isCooldown = false;
     public KeyCode shield;
     public GameObject shieldobject;
+    bool shieldActive;
+    public BoxCollider Cd;
+    public HealthAndDeath shipHealth;
+
+  
     // Start is called before the first frame update
     void Start()
     {
         shieldImage.fillAmount = 0;
+        Cd= GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -30,24 +36,23 @@ public class Shield : MonoBehaviour
             isCooldown = true;
             shieldImage.fillAmount = 1;
             shieldobject.SetActive(true);
+            shieldActive = true;
+            shipHealth.shieldActive = true;
         }
         if (isCooldown)
         {
-            shieldImage.fillAmount -= 1 / cooldown * Time.deltaTime;
+            shieldImage.fillAmount -= 10/ cooldown * Time.deltaTime;
         }
         if (shieldImage.fillAmount <= 0)
         {
             shieldImage.fillAmount = 0;
             isCooldown = false;
             shieldobject.SetActive(false);
+            shieldActive = false;
+            shipHealth.shieldActive = false;
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name =="yes")
-        {
-            Destroy(gameObject);
-            shieldobject.SetActive(true);
-        }
-    }
+    
 }
+
+

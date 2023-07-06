@@ -12,7 +12,7 @@ public class BossAttack : MonoBehaviour
     [SerializeField] private float interval;
     private float time = 2.5f;
     private float timePassed = 0;
-    [SerializeField] private GameObject player;
+    [SerializeField] public Transform player;
     [SerializeField] private AudioSource audioSource;
 
 
@@ -24,7 +24,8 @@ public class BossAttack : MonoBehaviour
     void Start()
     {
 
-        point = GameObject.Find("Boss").GetComponent<Transform>();
+        point = GameObject.Find("Boss(Clone)").GetComponent<Transform>();
+        player = GameObject.Find("ship").GetComponent<Transform>();
     }
 
     private void Update()

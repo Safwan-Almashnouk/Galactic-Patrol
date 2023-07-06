@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossScript : MonoBehaviour
 {
 
     private Rigidbody obj;
-    public float health = 5;
-    public GameObject effect;
-    public float delay = 5f;
+    [SerializeField] private float health = 100;
+    [SerializeField] private GameObject effect;
+    [SerializeField] private float delay = 5f;
     bool triggeredRunAway = false;
-    public AudioSource Napalm;
+    [SerializeField] private AudioSource Napalm;
     private BossAttack bossStop;
 
     
@@ -35,6 +36,7 @@ public class BossScript : MonoBehaviour
             triggeredRunAway = true;
             StartCoroutine(escape());
             Destroy(gameObject, 10);
+            StartCoroutine(over());
         }
 
     }
@@ -45,6 +47,13 @@ public class BossScript : MonoBehaviour
         yield return new WaitForSeconds(5f);
         obj.velocity = new Vector3(-10, 0, 0);
         
+    }
+    IEnumerator over()
+    {
+        
+        yield return new WaitForSeconds(8f);
+        SceneManager.LoadScene(sceneName: "GameOver");
+
     }
 
     void OnTriggerEnter(Collider collision)

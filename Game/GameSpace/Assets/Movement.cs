@@ -55,12 +55,12 @@ public class Movement : MonoBehaviour
             if (rotation.z > 180 + 0.5f)
             {
                 rotation.z += RotSpeed * Time.deltaTime;
-                Debug.Log("TurnLeft");
+                
             }
             else if (rotation.z > 0.5f && rotation.z < 180)
             {
                 rotation.z -= RotSpeed * Time.deltaTime;
-                Debug.Log("TurnRight");
+               
             }
             else
             {

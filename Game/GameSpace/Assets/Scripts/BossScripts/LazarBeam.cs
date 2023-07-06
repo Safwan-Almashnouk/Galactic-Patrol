@@ -17,4 +17,12 @@ public class LazarBeam : MonoBehaviour
         obj.velocity= new Vector3(30, 0 , 0);
         Destroy(gameObject, delay);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if  (other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }

@@ -21,6 +21,6 @@ public class manager : MonoBehaviour
     void Update()
     {
         instantce = this;
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 }

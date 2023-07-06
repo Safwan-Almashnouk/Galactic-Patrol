@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276794, g: 0.2158916, b: 0.29782537, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 628705394047336292, guid: 7039785017b999643b1069a425ad9ff9, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 628705394047336292, guid: 7039785017b999643b1069a425ad9ff9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 628705394047336292, guid: 7039785017b999643b1069a425ad9ff9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.01
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 628705394047336292, guid: 7039785017b999643b1069a425ad9ff9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1209,7 +1209,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1127910926
 MonoBehaviour:
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3938130548178961681, guid: 4923a34b6ed3f134c95a851ac4c1ab84, type: 3}
-  enemyInterval: 1
+  enemyInterval: 0.5
   point: {fileID: 0}
 --- !u!114 &1127910927
 MonoBehaviour:
@@ -1460,6 +1460,8 @@ GameObject:
   - component: {fileID: 1464070292}
   - component: {fileID: 1464070294}
   - component: {fileID: 1464070295}
+  - component: {fileID: 1464070296}
+  - component: {fileID: 1464070297}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1493,7 +1495,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -21.899, y: 171.79, z: 1.091}
 --- !u!114 &1464070294
 MonoBehaviour:
@@ -1521,6 +1523,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 5704713434536590873, guid: c012fa5611d35494f91cb3eb08dfa721, type: 3}
   IsSpawning: 0
+--- !u!114 &1464070296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464070290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abd8fe850791c64ba51582e5820a575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 941662860}
+  Boss: {fileID: 7203113314449672955, guid: 582bc22ca5562374dbdc23a6728e02b2, type: 3}
+--- !u!54 &1464070297
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464070290}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 124
+  m_CollisionDetection: 0
 --- !u!1 &1464879340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,7 +1890,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1808621033
 GameObject:
@@ -1872,6 +1904,7 @@ GameObject:
   - component: {fileID: 1808621037}
   - component: {fileID: 1808621036}
   - component: {fileID: 1808621035}
+  - component: {fileID: 1808621038}
   m_Layer: 0
   m_Name: shieldobject
   m_TagString: Untagged
@@ -1905,8 +1938,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.57419926
+  m_Center: {x: -0.07767656, y: 0, z: 8.956561e-16}
 --- !u!23 &1808621036
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1957,6 +1990,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808621033}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1808621038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808621033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf86d701de8c68b47894ec3fee9e6624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1948725472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2163,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056282634}
-  - component: {fileID: 2056282635}
   m_Layer: 5
   m_Name: shieldButton
   m_TagString: Untagged
@@ -2147,22 +2191,6 @@ RectTransform:
   m_AnchoredPosition: {x: 852, y: -343}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2056282635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056282633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6332240fe91147448a26b46ef3f4b80c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shieldImage: {fileID: 1627848186}
-  cooldown: 5
-  shield: 0
-  shieldobject: {fileID: 620677581}
 --- !u!114 &2065896525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,10 +2207,11 @@ MonoBehaviour:
   MeteorDamage: 1
   BeamDamage: 3
   delay: 3
-  effect: {fileID: 0}
-  audioSource: {fileID: 0}
-  bomb: {fileID: 0}
+  effect: {fileID: 1375129085989863269, guid: e1dca54cbb0b45f4fa17551e45dad87b, type: 3}
+  audioSource: {fileID: 7251093087610629258}
+  bomb: {fileID: 8300000, guid: eba4e23963a79a145ae688a2cb6e1d05, type: 3}
   bulletDamage: 1
+  shieldActive: 0
 --- !u!1 &2120848568
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,15 +2941,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &4400961175348177616
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
 --- !u!23 &4597308668529144991
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3387,6 +3407,7 @@ GameObject:
   - component: {fileID: 7251093087610629254}
   - component: {fileID: 7251093087610629250}
   - component: {fileID: 2065896525}
+  - component: {fileID: 8064502253041628687}
   m_Layer: 0
   m_Name: ship
   m_TagString: Player
@@ -3408,7 +3429,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!4 &7521125106279708208
 Transform:
@@ -3449,7 +3470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251093087610629300}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 280.7, y: 0.5865731, z: -0.11}
+  m_LocalPosition: {x: 280.7, y: 0.5865731, z: -0.17}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3470,6 +3491,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &8064502253041628687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251093087610629300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6332240fe91147448a26b46ef3f4b80c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shieldImage: {fileID: 1627848186}
+  cooldown: 5
+  shield: 9
+  shieldobject: {fileID: 620677581}
+  Cd: {fileID: 7251093087610629299}
+  shipHealth: {fileID: 2065896525}
 --- !u!1001 &8258362648047954988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3693,7 +3732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8359149511775644130, guid: d3d827f5d8607b24f8e2e2a42f15cac5, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8359149511775644130, guid: d3d827f5d8607b24f8e2e2a42f15cac5, type: 3}
       propertyPath: m_LocalPosition.x

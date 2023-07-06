@@ -7,16 +7,18 @@ using UnityEngine.SceneManagement;
 public class HealthAndDeath : MonoBehaviour
 {
     //player Health
-    public float Health;
+    [SerializeField] private float Health = 5;
     //Meteor damage
-    public float MeteorDamage = 1;
-    public float BeamDamage = 3;
-    public float delay = 3f;
-    public GameObject effect;
-    public AudioSource audioSource;
-    public AudioClip bomb;
-    public float bulletDamage = 1;
+    [SerializeField] private float MeteorDamage = 1;
+    [SerializeField] private float BeamDamage = 3;
+    [SerializeField] private float delay = 3f;
+    [SerializeField] private GameObject effect;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip bomb;
+    [SerializeField] private float bulletDamage = 1;
+    [SerializeField] private bool shieldActive = false;
 
+    
 
 
 
@@ -29,29 +31,32 @@ public class HealthAndDeath : MonoBehaviour
 
     private void OnTriggerEnter(Collider collission)
     {
-        //if the object the ship collides with has the tag meteor and if health is greater than zero:
-        if (collission.transform.CompareTag("Meteor") && Health > 0)
+        if (!shieldActive)
         {
-            //check if collision is detected
-            Debug.Log("Ship hit a meteor");
+            //if the object the ship collides with has the tag meteor and if health is greater than zero:
+            if (collission.transform.CompareTag("Meteor") && Health > 0)
+            {
+                //check if collision is detected
 
-            //damage the ship by one.
-            Health -= MeteorDamage;
-            Debug.Log($"Health: {Health}");
 
-            //if health is smaller than or equal to zero:
+                //damage the ship by one.
+                Health -= MeteorDamage;
 
+
+                //if health is smaller than or equal to zero:
+
+            }
+            if (collission.transform.CompareTag("Beam"))
+            {
+                Health -= MeteorDamage;
+            }
+            if (collission.transform.CompareTag("EnemyBullet"))
+            {
+                Health -= bulletDamage;
+
+            }
         }
 
-        if (collission.transform.CompareTag("Beam"))
-        {
-            Health -= MeteorDamage;
-            Debug.Log("you got hit");
-        }
-        if (collission.transform.CompareTag("EnemyBullet") && Health < 0)
-        {
-            Health -= bulletDamage;
-        }
 
         if (Health <= 0)
         {
