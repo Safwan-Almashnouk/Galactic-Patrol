@@ -16,6 +16,6 @@ public class meteorPos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x + -20, transform.position.y);
+        transform.position = new Vector3(target.position.x + -45, transform.position.y);
     }
 }

@@ -8,8 +8,9 @@ public class EnemyDamage : MonoBehaviour
 
 
     //class variables
-    public float enemyHealth = 3;
+    public float enemyHealth = 5;
     public float bulletDamage = 1;
+    private float gunheat;
 
 
 
@@ -18,6 +19,11 @@ public class EnemyDamage : MonoBehaviour
     {
         Debug.Log("Enemy damage script active");
         Debug.Log($"Enemy starting health: {enemyHealth}");
+    }
+
+    private void Update()
+    {
+       
     }
 
     private void OnTriggerEnter(Collider collision)

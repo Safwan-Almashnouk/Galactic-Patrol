@@ -21,7 +21,7 @@ public class EnemySpawning : MonoBehaviour
     void Update()
     {
         //if gameobject is not in game
-        if(GameObject.Find("enemyship(Clone)") == null && !IsSpawning && GameObject.Find("Boss(Clone)") == null && !IsSpawning)
+        if(GameObject.Find("enemyship(Clone)") == null && GameObject.Find("Boss(Clone)") == null && !IsSpawning)
         {
             IsSpawning = true;
             spawnEnemy();
@@ -34,12 +34,12 @@ public class EnemySpawning : MonoBehaviour
     async public void spawnEnemy()
     {   await Task.Delay(5000);
         //remove when building
-        #if UNITY_EDITOR
-        if(UnityEditor.EditorApplication.isPlaying){
+
+    
             Instantiate(Enemy, new Vector3(target.position.x + 5, -1, 0), Quaternion.Euler(new Vector3(0, -90, 0)));
             IsSpawning = false;
-        }
-        #endif
+        
+
     }
     
 

@@ -36,7 +36,6 @@ public class EnemyAttack : MonoBehaviour
         #if UNITY_EDITOR
         if (UnityEditor.EditorApplication.isPlaying)
         {
-            Debug.Log("Bullet fired.");
             Instantiate(Bullet, SpawnArea.position, SpawnArea.rotation);
             IsAttacking = false;
         }

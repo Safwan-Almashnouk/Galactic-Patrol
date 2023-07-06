@@ -16,7 +16,7 @@ public class HealthAndDeath : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip bomb;
     [SerializeField] private float bulletDamage = 1;
-    [SerializeField] private bool shieldActive = false;
+    [SerializeField] internal bool shieldActive = false;
 
     
 

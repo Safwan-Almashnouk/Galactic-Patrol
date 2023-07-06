@@ -31,7 +31,6 @@ public class DespawnBullet : MonoBehaviour
     {
         if (collision.gameObject.name == "Meteor(Clone)")
         {
-            Debug.Log("hah");
             Destroy(collision.gameObject);
             GetComponent<Renderer>().enabled = false;
             GetComponent<CapsuleCollider>().enabled = false;

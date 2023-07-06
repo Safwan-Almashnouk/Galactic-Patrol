@@ -330,7 +330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c94b69dcbdbad47a0116fac28b7109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
   target: {fileID: 3589987991455531659, guid: b3ae5b7372dd5c446a34d62b0967fa4d, type: 3}
 --- !u!54 &1441918952011930030
 Rigidbody:
@@ -362,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 3
   bulletDamage: 1
+  effect: {fileID: 1375129085989863269, guid: e1dca54cbb0b45f4fa17551e45dad87b, type: 3}
 --- !u!114 &-6326201091272561827
 MonoBehaviour:
   m_ObjectHideFlags: 0

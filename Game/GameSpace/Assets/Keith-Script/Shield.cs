@@ -8,11 +8,10 @@ public class Shield : MonoBehaviour
 {
     [Header("shield")]
     public Image shieldImage;
-    public float cooldown = 25;
     bool isCooldown = false;
+    bool StartedCooldown;
     public KeyCode shield;
     public GameObject shieldobject;
-    bool shieldActive;
     public BoxCollider Cd;
     public HealthAndDeath shipHealth;
 
@@ -22,6 +21,7 @@ public class Shield : MonoBehaviour
     {
         shieldImage.fillAmount = 0;
         Cd= GetComponent<BoxCollider>();
+        shieldImage.fillAmount = 2;
     }
 
     // Update is called once per frame
@@ -31,28 +31,51 @@ public class Shield : MonoBehaviour
     }
     void ShieldImage()
     {
-        if (Input.GetKey(shield) && isCooldown == false)
+        if (Input.GetKey(shield) && !isCooldown)
         {
             isCooldown = true;
-            shieldImage.fillAmount = 1;
             shieldobject.SetActive(true);
-            shieldActive = true;
             shipHealth.shieldActive = true;
         }
         if (isCooldown)
         {
-            shieldImage.fillAmount -= 10/ cooldown * Time.deltaTime;
+            shieldImage.fillAmount -= 0.1f * Time.deltaTime;
         }
-        if (shieldImage.fillAmount <= 0)
+        if (shieldImage.fillAmount <= 0 && isCooldown && !StartedCooldown)
         {
             shieldImage.fillAmount = 0;
-            isCooldown = false;
             shieldobject.SetActive(false);
-            shieldActive = false;
             shipHealth.shieldActive = false;
+            WaitForCooldown();
+            loop();
+        }
+
+
+    }
+    public IEnumerator WaitForCooldown()
+    {
+        StartedCooldown = true;
+        yield return new WaitForSeconds(3);
+        isCooldown = false;
+        shieldImage.fillAmount = 2;
+
+       
+    }
+    public IEnumerator loop()
+    {
+        while (isCooldown == false)
+        {
+
+            StartedCooldown = true;
+            yield return new WaitForSeconds(3);
+            isCooldown = false;
+            shieldImage.fillAmount = 2;
+            Debug.Log("o");
+            StartCoroutine(WaitForCooldown());
         }
     }
     
+
 }
 
 

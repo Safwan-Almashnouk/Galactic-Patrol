@@ -7,7 +7,7 @@ public class BossScript : MonoBehaviour
 {
 
     private Rigidbody obj;
-    [SerializeField] private float health = 100;
+    [SerializeField] internal float health = 250;
     [SerializeField] private GameObject effect;
     [SerializeField] private float delay = 5f;
     bool triggeredRunAway = false;
