@@ -1,81 +1,70 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Shield : MonoBehaviour
 {
-    [Header("shield")]
     public Image shieldImage;
-    bool isCooldown = false;
-    bool StartedCooldown;
-    public KeyCode shield;
-    public GameObject shieldobject;
-    public BoxCollider Cd;
+    public KeyCode shieldKey;
+    public GameObject shieldObject;
+    public BoxCollider shieldCollider;
     public HealthAndDeath shipHealth;
 
-  
-    // Start is called before the first frame update
+    public float shieldDuration = 5f; 
+    public float cooldownTime = 3f;   
+    private bool isCooldown = false;
+
     void Start()
     {
-        shieldImage.fillAmount = 0;
-        Cd= GetComponent<BoxCollider>();
-        shieldImage.fillAmount = 2;
+        shieldImage.fillAmount = 1;
+        shieldCollider = GetComponent<BoxCollider>();
+        shieldObject.SetActive(false);  
     }
 
-    // Update is called once per frame
     void Update()
     {
-        ShieldImage();
+        HandleShield();
     }
-    void ShieldImage()
+
+    void HandleShield()
     {
-        if (Input.GetKey(shield) && !isCooldown)
+        if (Input.GetKey(shieldKey) && !isCooldown)
         {
-            isCooldown = true;
-            shieldobject.SetActive(true);
-            shipHealth.shieldActive = true;
+            ActivateShield();
         }
+
         if (isCooldown)
         {
-            shieldImage.fillAmount -= 0.1f * Time.deltaTime;
-        }
-        if (shieldImage.fillAmount <= 0 && isCooldown && !StartedCooldown)
-        {
-            shieldImage.fillAmount = 0;
-            shieldobject.SetActive(false);
-            shipHealth.shieldActive = false;
-            WaitForCooldown();
-            loop();
-        }
+            shieldImage.fillAmount -= 1 / cooldownTime * Time.deltaTime;
 
-
+            if (shieldImage.fillAmount <= 0)
+            {
+                isCooldown = false;
+                shieldImage.fillAmount = 1;
+            }
+        }
     }
-    public IEnumerator WaitForCooldown()
+
+    void ActivateShield()
     {
-        StartedCooldown = true;
-        yield return new WaitForSeconds(3);
-        isCooldown = false;
-        shieldImage.fillAmount = 2;
-
-       
+        shieldObject.SetActive(true);
+        shipHealth.shieldActive = true;
+        shieldImage.fillAmount = 1;
+        StartCoroutine(DeactivateShieldAfterDuration());
     }
-    public IEnumerator loop()
+
+    IEnumerator DeactivateShieldAfterDuration()
     {
-        while (isCooldown == false)
-        {
-
-            StartedCooldown = true;
-            yield return new WaitForSeconds(3);
-            isCooldown = false;
-            shieldImage.fillAmount = 2;
-            Debug.Log("o");
-            StartCoroutine(WaitForCooldown());
-        }
+        yield return new WaitForSeconds(shieldDuration);
+        shieldObject.SetActive(false);
+        shipHealth.shieldActive = false;
+        StartCoroutine(StartCooldown());
     }
-    
 
+    IEnumerator StartCooldown()
+    {
+        isCooldown = true;
+        shieldImage.fillAmount = 1;
+        yield return new WaitForSeconds(cooldownTime); 
+    }
 }
-
-
